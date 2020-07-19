@@ -4,9 +4,27 @@
          bootstrap="./test/bootstrap.php"
          colors="true">
     <testsuites>
-        <testsuite name="zend-test Test Suite">
-            <directory>./test/</directory>
+
+        <testsuite name="day-one Test Suite">
+            <directory>./test/one</directory>
+            <directory>./test/two</directory>
         </testsuite>
+
+        <testsuite name="day-two Test Suite">
+            <directory>./test/three</directory>
+            <directory>./test/four</directory>
+        </testsuite>
+
+        <testsuite name="calculator Test Suite">
+            <directory>./test/one</directory>
+            <directory>./test/three</directory>
+        </testsuite>
+
+        <testsuite name="user Test Suite">
+            <directory>./test/two</directory>
+            <directory>./test/four</directory>
+        </testsuite>
+
     </testsuites>
 
     <filter>

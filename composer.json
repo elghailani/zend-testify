@@ -1,11 +1,12 @@
 {
-    "name": "zendframework/zend-test",
+    "name": "aelghailani/testify",
     "description": "Tools to facilitate unit testing of zend-mvc applications",
     "license": "BSD-3-Clause",
     "keywords": [
         "zendframework",
         "zf",
-        "test"
+        "test",
+        "phpunit"
     ],
     "support": {
         "docs": "https://docs.zendframework.com/zend-test/",
@@ -16,8 +17,8 @@
         "forum": "https://discourse.zendframework.com/c/questions/components"
     },
     "require": {
-        "php": "^5.6 || ^7.0",
-        "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0 || ^8.0",
+        "php": "^7.1",
+        "phpunit/phpunit": "^7.0 || ^9.0",
         "sebastian/version": "^1.0.4 || ^2.0",
         "zendframework/zend-console": "^2.6",
         "zendframework/zend-dom": "^2.6",
@@ -27,10 +28,10 @@
         "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
         "zendframework/zend-stdlib": "^2.7 || ^3.0",
         "zendframework/zend-uri": "^2.5",
-        "zendframework/zend-view": "^2.6.3"
+        "zendframework/zend-view": "^2.6.3",
+        "mockery/mockery": "*"
     },
     "require-dev": {
-        "mikey179/vfsstream": "~1.2",
         "zendframework/zend-coding-standard": "~1.0.0",
         "zendframework/zend-i18n": "^2.6",
         "zendframework/zend-log": "^2.7.1",
@@ -67,12 +68,6 @@
         }
     },
     "scripts": {
-        "check": [
-            "@cs-check",
-            "@test"
-        ],
-        "cs-check": "phpcs",
-        "cs-fix": "phpcbf",
         "test": "phpunit --colors",
         "test-coverage": "phpunit --colors=always --coverage-clover clover.xml"
     }
